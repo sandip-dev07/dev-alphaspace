@@ -1,0 +1,33 @@
+﻿.carousel { position: relative; width: 100%; }
+.viewport {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  overscroll-behavior-x: contain;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 30px, #000 calc(100% - 30px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 30px, #000 calc(100% - 30px), transparent 100%);
+}
+.viewport::-webkit-scrollbar { display: none; }
+.viewport:focus-visible { outline: 2px solid var(--orange); outline-offset: -2px; }
+.track { display: flex; width: max-content; }
+.group { display: flex; gap: 12px; padding-right: 12px; }
+.card { flex-shrink: 0; height: clamp(280px, 26vw, 400px); }
+.wide { width: clamp(450px, 46vw, 710px); }
+.square { width: clamp(280px, 26vw, 400px); }
+.image { position: relative; height: 100%; width: 100%; border-radius: 12px; overflow: hidden; background: #eceee5; }
+.image img { object-fit: cover; }
+@media (max-width: 650px) {
+  .viewport {
+    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, #000 16px, #000 calc(100% - 16px), transparent 100%);
+  }
+  .group { gap: 10px; padding-right: 10px; }
+  .card { height: clamp(230px, 68vw, 310px); }
+  .wide { width: 90vw; }
+  .square { width: 68vw; }
+  .image { border-radius: 9px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .duplicate { display: none; }
+}

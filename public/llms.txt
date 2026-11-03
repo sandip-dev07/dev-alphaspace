@@ -1,0 +1,36 @@
+# Dev Alphaspace
+
+> Dev Alphaspace is a product studio based in Bengaluru, India. We partner with founders and teams to design and build web and mobile products, AI features, data solutions, and MVPs, and we help teams hire product, engineering, AI, and data talent.
+
+## Key facts
+
+- Website: https://devalphaspace.in
+- Email: work@devalphaspace.in
+- Location: Bengaluru, India
+- Founded: 2023
+- LinkedIn: https://www.linkedin.com/company/dev-alphaspace
+- X (Twitter): https://twitter.com/dev_alphaspace
+
+## Services
+
+- UI/UX Design: research, product design, and design systems for web and mobile products.
+- Web Development: websites, web apps, and SaaS platforms built to scale.
+- App Development: iOS, Android, and cross-platform mobile applications.
+- AI Products: AI-powered MVPs, integrations, and workflows.
+- Data Solutions: data pipelines, analytics, and dashboards.
+- MVP Development: idea validation, prototyping, and launch support.
+
+## Pages
+
+- https://devalphaspace.in/: studio overview, services, selected work, and FAQs.
+- https://devalphaspace.in/services: design, engineering, AI, data, and MVP services.
+- https://devalphaspace.in/work: selected client projects across SaaS, editorial, and mobile.
+- https://devalphaspace.in/hire-talent: hiring support for design, engineering, AI, and data roles.
+- https://devalphaspace.in/approach: how projects are scoped, built, and supported after launch.
+- https://devalphaspace.in/contact: start a project or ask a question.
+
+## Contact
+
+- Contact page: https://devalphaspace.in/contact
+- Book a 30-minute conversation: https://cal.com/dev-alphaspace-mq7ywe/30min
+- Email: work@devalphaspace.in

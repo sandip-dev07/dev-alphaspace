@@ -1,0 +1,48 @@
+﻿.page { width: 100%; padding: 88px 32px 100px; }
+.layout { width: min(1040px, 100%); margin-inline: auto; display: grid; grid-template-columns: 1fr 1fr; align-items: start; gap: 64px; }
+.intro { padding-top: 9px; }
+.eyebrow { display: flex; align-items: center; gap: 8px; font: 9px var(--font-geist-mono), monospace; letter-spacing: 1px; color: #7d8074; }
+.eyebrow > span { width: 6px; height: 6px; border-radius: 50%; background: var(--orange); }
+.intro h1 { font: 450 clamp(40px, 4vw, 56px)/1.15 var(--font-geist-sans), sans-serif; letter-spacing: -2px; margin: 22px 0 0; }
+.intro h1 > span { color: var(--orange); }
+.description { margin-top: 23px; color: #777b6e; font-size: 16px; line-height: 1.85; max-width: 425px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 29px; }
+.tags span { padding: 7px 11px; background: #fdfdfb; border: 1px solid #e4e5dc; border-radius: 20px; color: #6f7663; font-size: 11px; }
+.contactCard { border: 1px solid #dedfd5; background: #fdfdfb; border-radius: 13px; margin-top: 36px; overflow: hidden; }
+.call { padding: 25px; }
+.call > svg { color: #b65330; }
+.call h2 { font-size: 19px; font-weight: 450; line-height: 1.4; letter-spacing: -.5px; margin-top: 13px; }
+.call p { font-size: 12px; color: #7a7f70; line-height: 1.8; margin-top: 9px; }
+.callButton { display: flex; justify-content: center; align-items: center; gap: 28px; background: #292e25; color: white; border-radius: 8px; padding: 11px 14px; margin-top: 22px; font-size: 15px; font-weight: 500; transition: background .2s; }
+.callButton:hover { background: #424e35; }
+.direct { border-top: 1px solid #e5e5dc; padding: 21px 25px; }
+.direct > span { font-size: 10px; color: #7b8171; }
+.direct a { display: flex; align-items: center; gap: 9px; font-size: 13px; margin-top: 12px; overflow-wrap: anywhere; }
+.direct a > svg { flex-shrink: 0; color: #b65330; }
+.direct a > svg:last-child { margin-left: auto; }
+.note { display: flex; gap: 12px; align-items: flex-start; margin-top: 23px; color: #878b7e; }
+.note svg { flex-shrink: 0; margin-top: 3px; }
+.note p { font-size: 11px; line-height: 1.8; }
+.form { border: 1px solid #e1e2d9; border-radius: 14px; background: #fdfdfb; padding: 30px; box-shadow: 0 4px 24px #24251f02; }
+.field { display: grid; gap: 10px; margin-bottom: 22px; }
+.field label { font-size: 13px; color: #34392d; }
+.field label > span { color: #8a8e80; font-size: 10px; }
+.field input, .field select, .field textarea, .draft textarea { width: 100%; min-width: 0; border: 1px solid #e3e4dc; border-radius: 9px; background: #fff; color: #353a2e; font: inherit; font-size: 13px; line-height: 1.7; padding: 13px 15px; transition: border-color .2s, box-shadow .2s; }
+.field input, .field select { min-height: 50px; }
+.field select { cursor: pointer; }
+.field textarea { min-height: 145px; resize: vertical; }
+.field input::placeholder, .field textarea::placeholder { color: #959b8e; }
+.field input:focus, .field select:focus, .field textarea:focus, .draft textarea:focus { outline: none; border-color: #d07852; box-shadow: 0 0 0 3px #ec572b14; }
+.submit { display: flex; align-items: center; justify-content: center; gap: 28px; width: 100%; min-height: 49px; padding: 11px 14px; background: var(--orange); color: #fff; border: 1px solid transparent; border-radius: 8px; font: inherit; font-size: 15px; font-weight: 500; cursor: pointer; transition: background .2s; }
+.submit:hover { background: #ce4720; }
+.submit:focus-visible, .draft button:focus-visible { outline: 2px solid var(--orange); outline-offset: 4px; }
+.formNote { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 13px; font-size: 9px; color: #858a7c; line-height: 1.7; text-align: center; }
+.formNote svg { flex-shrink: 0; }
+.draft { margin-top: 20px; padding-top: 17px; border-top: 1px solid #e3e4dc; color: #656e58; font-size: 12px; line-height: 1.8; }
+.draft summary { cursor: pointer; margin-top: 12px; color: #353a2e; }
+.draft details > p { margin-block: 12px; }
+.draft a { text-decoration: underline; }
+.draft button { display: inline-flex; gap: 8px; align-items: center; border: 1px solid #d9ddcf; border-radius: 8px; padding: 11px 14px; background: #eff1e7; cursor: pointer; margin-top: 10px; }
+@media (max-width: 950px) { .layout { gap: 35px; } .page { padding-block: 58px 70px; } .form { padding: 24px; } }
+@media (max-width: 700px) { .layout { grid-template-columns: 1fr; max-width: 500px; gap: 35px; } .page { padding: 38px 20px 60px; } .description { max-width: none; font-size: 15px; } .intro h1 { font-size: 44px; } .contactCard { margin-top: 27px; } }
+@media (max-width: 380px) { .form { padding: 20px; } .direct, .call { padding: 20px; } .direct a { font-size: 11px; } .eyebrow { font-size: 8px; } }

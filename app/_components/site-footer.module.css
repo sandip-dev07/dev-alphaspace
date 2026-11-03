@@ -1,0 +1,152 @@
+.footer {
+  flex-shrink: 0;
+  border-top: 1px solid #e8e8df;
+  background: var(--background);
+  padding-top: 72px;
+}
+
+.inner {
+  display: block;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.intro > a {
+  font-size: 22px;
+  letter-spacing: -0.9px;
+}
+
+.intro > a svg {
+  width: 27px;
+  height: 27px;
+}
+
+.intro > p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 40px;
+  margin-top: 80px;
+  padding-bottom: 64px;
+}
+
+.column h2 {
+  margin: 0 0 22px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+}
+
+.column ul {
+  display: grid;
+  gap: 13px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.column a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #7b7e72;
+  font-size: 14px;
+  line-height: 1.5;
+  transition: color 160ms ease;
+}
+
+.column a:hover,
+.column a:focus-visible {
+  color: var(--orange);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-top: 1px solid #e8e8df;
+  padding-block: 24px;
+  color: #7f8275;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.bottom a {
+  transition: color 160ms ease;
+}
+
+.bottom a:hover,
+.bottom a:focus-visible {
+  color: var(--orange);
+}
+
+@media (max-width: 800px) {
+  .footer {
+    padding-top: 56px;
+  }
+
+  .columns {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 28px;
+    margin-top: 56px;
+    padding-bottom: 48px;
+  }
+
+  .bottom {
+    flex-wrap: wrap;
+    gap: 10px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding-top: 48px;
+  }
+
+  .intro > a {
+    font-size: 19px;
+  }
+
+  .intro > a svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .columns {
+    gap: 34px 20px;
+    margin-top: 48px;
+    padding-bottom: 40px;
+  }
+
+  .column h2 {
+    margin-bottom: 16px;
+    font-size: 13px;
+  }
+
+  .column ul {
+    gap: 11px;
+  }
+
+  .column a {
+    font-size: 13px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-block: 20px;
+  }
+}
