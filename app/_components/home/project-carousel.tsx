@@ -128,7 +128,8 @@ export default function ProjectCarousel() {
                             ? "(max-width: 650px) 68vw, 400px"
                             : "(max-width: 650px) 90vw, 710px"
                         }
-                        priority={!duplicate && index < 2}
+                        loading={!duplicate && index < 2 ? "eager" : "lazy"}
+                        fetchPriority={!duplicate && index < 2 ? "high" : "auto"}
                       />
                     </div>
                 </article>
