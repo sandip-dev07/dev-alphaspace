@@ -1,0 +1,50 @@
+.introActions { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; padding-bottom: 20px; }
+.section { padding-block: 72px; }
+.heading { max-width: 760px; margin-bottom: 36px; }
+.heading h2, .brief h2 { font-size: clamp(32px, 3.4vw, 48px); line-height: 1.15; letter-spacing: -1.6px; margin-top: 20px; font-weight: 500; }
+.heading > p, .brief p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-top: 20px; max-width: 650px; }
+.roles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.role { display: flex; flex-direction: column; padding: 28px; border: 1px solid #e9e8e1; border-radius: 12px; background: #f8f7f3; }
+.number { font: 10px var(--font-geist-mono), monospace; letter-spacing: 1px; color: #777b6b; }
+.role h3, .options h3, .steps h3 { font-size: 21px; line-height: 1.3; font-weight: 500; letter-spacing: -.5px; margin-top: 22px; }
+.role p, .options p, .steps p { font-size: 13px; line-height: 1.8; color: var(--muted); margin-top: 14px; }
+.role ul { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
+.role li { display: flex; gap: 9px; font-size: 12px; line-height: 1.7; }
+.role li svg { color: #ad4424; flex-shrink: 0; margin-top: 3px; }
+.role .fit { border-top: 1px solid var(--line); padding-top: 20px; margin-top: 24px; margin-bottom: 24px; }
+.fit strong { display: block; font-size: 12px; color: var(--foreground); margin-bottom: 6px; }
+.role > a, .projectNote a { display: inline-flex; align-items: center; gap: 10px; font-size: 13px; color: #ad4424; }
+.role > a { margin-top: auto; }
+.role > a:hover, .projectNote a:hover { text-decoration: underline; }
+.engagementBand { background: #292e25; color: #fff; padding-block: 64px; }
+.engagementBand .heading > p { color: #c4c9bc; }
+.engagementBand h2 span { color: #d6dfb5; }
+.options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
+.options article { border-top: 1px solid #59604e; }
+.options p { color: #c4c9bc; }
+.options p + p { font-size: 12px; color: #adb7a0; }
+.note { margin-top: 32px; font-size: 12px; line-height: 1.8; color: #c4c9bc; }
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; list-style: none; margin: 0; padding: 0; }
+.steps li { border-top: 1px solid var(--line); padding-top: 20px; }
+.brief { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; background: #f8f7f3; border: 1px solid #e9e8e1; border-radius: 14px; padding: 40px; }
+.brief > div > a { margin-top: 24px; }
+.brief ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+.brief li { font-size: 13px; line-height: 1.8; color: var(--muted); }
+.brief li strong { display: block; color: var(--foreground); margin-bottom: 4px; font-weight: 500; }
+.projectNote { padding-block: 32px 64px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px 28px; }
+.projectNote p { font-size: 13px; line-height: 1.8; color: var(--muted); }
+@media (max-width: 1100px) {
+  .roles, .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .role { padding: 24px; }
+}
+@media (max-width: 800px) {
+  .options, .brief { grid-template-columns: 1fr; }
+  .section, .engagementBand { padding-block: 50px; }
+  .brief { padding: 28px; gap: 32px; }
+}
+@media (max-width: 540px) {
+  .roles, .steps { grid-template-columns: 1fr; }
+  .introActions { gap: 20px; }
+  .brief { padding: 24px; }
+  .projectNote { padding-bottom: 40px; }
+}

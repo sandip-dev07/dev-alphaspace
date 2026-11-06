@@ -130,6 +130,14 @@
 .detail > a:hover {
   color: var(--orange);
 }
+.detail > .detailsLink {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: #b84520;
+}
+.allServices { display: flex; justify-content: center; margin-top: 26px; }
+.allServices a { display: inline-flex; align-items: center; gap: 12px; font-size: 13px; }
+.allServices a:hover { color: #b84520; }
 @media (max-width: 650px) {
   .explorer {
     grid-template-columns: 1fr;

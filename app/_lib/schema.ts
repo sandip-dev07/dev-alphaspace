@@ -1,3 +1,4 @@
+import { services } from "../_data/services";
 import { faqs } from "../_data/home";
 import { projects } from "../_data/projects";
 import {
@@ -19,42 +20,7 @@ export const businessId = `${siteUrl}/#localbusiness`;
 
 const sameAs = socialLinks.map(({ href }) => href);
 
-/**
- * Service descriptions are derived from the tags published on the services
- * section, so schema and visible copy describe the same offering.
- */
-export const serviceCatalog = [
-  {
-    name: "UI/UX Design",
-    description:
-      "Research, product design, and design systems for web and mobile products.",
-  },
-  {
-    name: "Web Development",
-    description:
-      "Websites, web apps, and SaaS platforms built to scale.",
-  },
-  {
-    name: "App Development",
-    description:
-      "iOS, Android, and cross-platform mobile applications with a native feel.",
-  },
-  {
-    name: "AI Products",
-    description:
-      "AI-powered MVPs, integrations, and workflows designed around a real task.",
-  },
-  {
-    name: "Data Solutions",
-    description:
-      "Data pipelines, analytics, and dashboards that connect data to decisions.",
-  },
-  {
-    name: "MVP Development",
-    description:
-      "Idea validation, prototyping, and launch support for a focused first version.",
-  },
-] as const;
+export const serviceCatalog = services.map(({ id, name, description }) => ({ id, name, description }));
 
 const organization = {
   "@type": "Organization",
@@ -152,7 +118,7 @@ export function servicesItemListSchema() {
         name: service.name,
         description: service.description,
         serviceType: service.name,
-        url: absoluteUrl("/services"),
+        url: absoluteUrl(`/services#${service.id}`),
         provider: { "@id": organizationId },
       },
     })),
@@ -181,12 +147,12 @@ export function workItemListSchema() {
 }
 
 /** FAQPage for pages that render the visible FAQ list. */
-export function faqSchema(path = "/") {
+export function faqSchema(path = "/", items = faqs) {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "@id": `${absoluteUrl(path)}#faq`,
-    mainEntity: faqs.map(({ question, answer }) => ({
+    mainEntity: items.map(({ question, answer }) => ({
       "@type": "Question",
       name: question,
       acceptedAnswer: {

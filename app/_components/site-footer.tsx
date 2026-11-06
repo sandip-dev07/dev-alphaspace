@@ -20,6 +20,7 @@ const socials = [
 const company = [
   { label: "Contact us", href: "/contact" },
   { label: "Book a meeting", href: bookingUrl },
+  { label: "Terms & Conditions", href: "/terms-and-conditions" },
 ];
 
 function FooterLinks({

@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowUpRight, ArrowRight } from "lucide-react";
 import { services, enquiryHref } from "../../_data/home";
 import styles from "./services-section.module.css";
@@ -30,9 +31,11 @@ export default function ServicesSection() {
           <h3>{service.name}</h3>
           <p>{service.copy}</p>
           <div className={styles.tags}>{service.tags.split(" · ").map(tag => <span key={tag}>{tag}</span>)}</div>
+          <Link className={styles.detailsLink} href={`/services#${service.id}`}>Explore service details <ArrowUpRight size={16} aria-hidden="true" /></Link>
           <a href={enquiryHref(`Let's talk about ${service.name}`)}>Let’s talk about it <ArrowRight size={16} /></a>
         </div>
       </div>
+      <div className={styles.allServices}><Link href="/services">Explore all services <ArrowRight size={16} aria-hidden="true" /></Link></div>
     </section>
   );
 }

@@ -22,7 +22,7 @@ export default function WorkSection() {
           </p>
         </div>
         <div className="work-grid">
-          {projects.map((project) => (
+          {projects.slice(0, 4).map((project) => (
             <article className="project" id={project.id} key={project.id}>
               <div className="project-image">
                 <Image

@@ -1,4 +1,4 @@
-import { Code2, Database, Layers3, MousePointer2, Sparkles, Smartphone } from "lucide-react";
+export { services } from "./services";
 import { contactEmail } from "./site";
 
 export { contactEmail };
@@ -9,45 +9,6 @@ export function enquiryHref(subject?: string) {
   const href = `mailto:${contactEmail}`;
   return subject ? `${href}?subject=${encodeURIComponent(subject)}` : href;
 }
-
-export const services = [
-  {
-    icon: MousePointer2,
-    name: "UI/UX Design",
-    copy: "Thoughtful experiences. Interfaces people love to use.",
-    tags: "Research · Product design · Design systems",
-  },
-  {
-    icon: Code2,
-    name: "Web Development",
-    copy: "Beautiful on the outside. Built to scale on the inside.",
-    tags: "Websites · Web apps · SaaS platforms",
-  },
-  {
-    icon: Smartphone,
-    name: "App Development",
-    copy: "Your product, in their pocket. Native feel, everywhere.",
-    tags: "iOS · Android · Cross-platform",
-  },
-  {
-    icon: Sparkles,
-    name: "AI Products",
-    copy: "Less busywork. More possibility. AI that earns its place.",
-    tags: "AI-powered MVPs · Integrations · Workflows",
-  },
-  {
-    icon: Database,
-    name: "Data Solutions",
-    copy: "Connect the dots between your data and your next move.",
-    tags: "Data pipelines · Analytics · Dashboards",
-  },
-  {
-    icon: Layers3,
-    name: "MVP Development",
-    copy: "Get the right first version into real hands. Then grow.",
-    tags: "Idea validation · Prototyping · Launch",
-  },
-];
 
 export const faqs = [
   {

@@ -10,8 +10,8 @@ const categories = [
   "UI/UX design",
   "Web development",
   "iOS / Android app",
-  "AI products & integrations",
-  "Data solutions",
+  "AI & machine learning",
+  "Data & governance",
   "Hire talent",
   "Something else",
 ];

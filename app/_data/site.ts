@@ -68,7 +68,7 @@ export const keywords = [
 ];
 
 // Bump when page content meaningfully changes; feeds sitemap lastModified.
-export const contentUpdated = "2026-11-03";
+export const contentUpdated = "2026-11-06";
 
 export const sitemapRoutes = [
   { path: "/", priority: 1, changeFrequency: "monthly" },
@@ -77,6 +77,7 @@ export const sitemapRoutes = [
   { path: "/hire-talent", priority: 0.8, changeFrequency: "monthly" },
   { path: "/approach", priority: 0.7, changeFrequency: "yearly" },
   { path: "/contact", priority: 0.7, changeFrequency: "yearly" },
+  { path: "/terms-and-conditions", priority: 0.3, changeFrequency: "yearly" },
 ] as const;
 
 export function absoluteUrl(path = "/") {

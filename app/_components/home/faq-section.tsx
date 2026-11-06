@@ -1,6 +1,6 @@
 import { faqs } from "../../_data/home";
 
-export default function FaqSection() {
+export default function FaqSection({ items = faqs }: { items?: { question: string; answer: string }[] }) {
   return (
     <section className="faq-section shell section">
       <div>
@@ -12,7 +12,7 @@ export default function FaqSection() {
         </h2>
       </div>
       <div className="faqs">
-        {faqs.map(({ question, answer }) => (
+        {items.map(({ question, answer }) => (
           <details key={question}>
             <summary>
               {question}
